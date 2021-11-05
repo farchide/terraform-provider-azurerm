@@ -49,6 +49,7 @@ resource "azurerm_cosmosdb_account" "example" {
     location          = azurerm_resource_group.example.location
     failover_priority = 0
   }
+  tags = "String<A mapping of tags to assign to the resource.>"
 }
 
 resource "azurerm_private_endpoint" "example" {

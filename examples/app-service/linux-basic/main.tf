@@ -31,4 +31,7 @@ resource "azurerm_app_service" "main" {
     remote_debugging_enabled = true
     remote_debugging_version = "VS2019"
   }
+  identity {
+    type = "String<Specifies the type of Managed Service Identity that should be configured on this API Management Service. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned>"
+  }
 }

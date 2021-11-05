@@ -31,4 +31,7 @@ resource "azurerm_app_service" "main" {
     remote_debugging_enabled = true
     remote_debugging_version = "VS2019"
   }
+  logs {
+    detailed_error_messages_enabled = true
+  }
 }

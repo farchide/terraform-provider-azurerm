@@ -31,4 +31,11 @@ resource "azurerm_app_service" "main" {
     remote_debugging_enabled = true
     remote_debugging_version = "VS2019"
   }
+  auth_settings {
+    active_directory {
+      client_id         = "String<The Client ID of this relying party application. Enables OpenIDConnection authentication with Azure Active Directory.>"
+      client_secret     = "String<The Client Secret of this relying party application. If no secret is provided, implicit flow will be used.>"
+      allowed_audiences = "String<Allowed audience values to consider when validating JWTs issued by Azure Active Directory.>"
+    }
+  }
 }

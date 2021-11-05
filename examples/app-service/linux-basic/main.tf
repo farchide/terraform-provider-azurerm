@@ -30,5 +30,6 @@ resource "azurerm_app_service" "main" {
     dotnet_framework_version = "v4.0"
     remote_debugging_enabled = true
     remote_debugging_version = "VS2019"
+    ftps_state               = "String<State of FTP / FTPS service for this App Service. Possible values include: AllAllowed, FtpsOnly and Disabled>"
   }
 }

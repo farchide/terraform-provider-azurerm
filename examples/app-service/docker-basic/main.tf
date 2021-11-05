@@ -35,4 +35,7 @@ resource "azurerm_app_service" "main" {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
     "DOCKER_REGISTRY_SERVER_URL"          = "https://index.docker.io"
   }
+  auth_settings {
+    enabled = true
+  }
 }

@@ -60,4 +60,7 @@ resource "azurerm_app_service" "main" {
       ]
     }
   }
+  logs {
+    failed_request_tracing_enabled = true
+  }
 }

@@ -34,7 +34,7 @@ resource "azurerm_network_security_rule" "ssh" {
   network_security_group_name = azurerm_network_security_group.example.name
   priority                    = 102
   direction                   = "Inbound"
-  access                      = "Allow"
+  access                      = "Deny"
   protocol                    = "Tcp"
   source_port_range           = "*"
   destination_port_range      = "22"

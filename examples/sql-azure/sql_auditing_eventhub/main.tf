@@ -14,6 +14,12 @@ resource "azurerm_mssql_server" "example" {
   version                      = "12.0"
   administrator_login          = "mradministrator"
   administrator_login_password = "thisIsDog11"
+  extended_auditing_policy {
+    storage_endpoint                        = "String<Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.>"
+    storage_account_access_key              = "String<Specifies the access key to use for the auditing storage account.>"
+    storage_account_access_key_is_secondary = true
+    retention_in_days                       = 6
+  }
 }
 
 resource "azurerm_mssql_database" "example" {

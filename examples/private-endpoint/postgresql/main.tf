@@ -32,7 +32,7 @@ resource "azurerm_postgresql_server" "example" {
   administrator_login_password = "H@Sh1CoR3!"
   auto_grow_enabled            = true
   backup_retention_days        = 7
-  geo_redundant_backup_enabled = false
+  geo_redundant_backup_enabled = true
   sku_name                     = "GP_Gen5_2"
   ssl_enforcement_enabled      = true
   storage_mb                   = 51200

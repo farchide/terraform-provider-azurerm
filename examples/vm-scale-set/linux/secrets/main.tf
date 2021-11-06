@@ -56,6 +56,7 @@ resource "azurerm_key_vault" "main" {
       "set",
     ]
   }
+  purge_protection_enabled = true
 }
 
 resource "azurerm_key_vault_certificate" "main" {

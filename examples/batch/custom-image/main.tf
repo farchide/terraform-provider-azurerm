@@ -52,6 +52,9 @@ resource "azurerm_storage_account" "example" {
   tags = {
     environment = "Dev"
   }
+  network_rules {
+    bypass = ["AzureServices"]
+  }
 }
 
 resource "azurerm_storage_container" "example" {

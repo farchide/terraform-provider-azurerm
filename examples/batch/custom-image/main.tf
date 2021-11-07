@@ -96,6 +96,7 @@ resource "azurerm_virtual_machine" "example" {
     environment = "Dev"
     cost-center = "Ops"
   }
+  availability_set_id = "String<The ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.>"
 }
 
 resource "azurerm_image" "example" {

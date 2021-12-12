@@ -40,7 +40,7 @@ resource "azurerm_kubernetes_cluster" "example" {
   }
 
   network_profile {
-    network_plugin    = "kubenet"
+    network_plugin    = "azure"
     load_balancer_sku = "Standard"
   }
 }
